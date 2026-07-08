@@ -1,0 +1,19 @@
+# univapay_client_sdk
+#
+# This file was automatically generated for Univapay
+# by APIMATIC v3.0 ( https://www.apimatic.io ).
+
+module UnivapayClientSdk
+  # Http response received.
+  class ApiResponse < CoreLibrary::ApiResponse
+    # The constructor
+    # @param [HttpResponse] http_response The original, raw response from the api.
+    # @param [Object] data The data field specified for the response.
+    # @param [Array<String>] errors Any errors returned by the server.
+    def initialize(http_response,
+                   data: nil,
+                   errors: nil)
+      super
+    end
+  end
+end
