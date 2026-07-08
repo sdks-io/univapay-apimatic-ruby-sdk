@@ -4,13 +4,13 @@
 # by APIMATIC v3.0 ( https://www.apimatic.io ).
 
 module UnivapayClientSdk
-  # BaseController.
-  class BaseController
+  # BaseApi.
+  class BaseApi
     include CoreLibrary
     attr_accessor :config, :http_call_back
 
     def self.user_agent
-      'Ruby-SDK/0.0.3 (OS: {os-info}, Engine: {engine}/{engine-version})'
+      'Ruby-SDK/0.0.4 (OS: {os-info}, Engine: {engine}/{engine-version})'
     end
 
     def self.user_agent_parameters

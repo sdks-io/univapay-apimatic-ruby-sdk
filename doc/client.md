@@ -60,18 +60,18 @@ See the [`Environment-Based Client Initialization`](../doc/environment-based-cli
 
 ## Univapay Public API Client
 
-The gateway for the SDK. This class acts as a factory for the Controllers and also holds the configuration of the SDK.
+The gateway for the SDK. This class acts as a factory for the Apis and also holds the configuration of the SDK.
 
-## Controllers
+## Apis
 
 | Name | Description |
 |  --- | --- |
-| charges | Gets ChargesController |
-| transaction_tokens | Gets TransactionTokensController |
-| refunds | Gets RefundsController |
-| subscriptions | Gets SubscriptionsController |
-| cancels | Gets CancelsController |
-| merchants | Gets MerchantsController |
-| stores | Gets StoresController |
-| webhooks | Gets WebhooksController |
+| charges | Gets ChargesApi |
+| transaction_tokens | Gets TransactionTokensApi |
+| refunds | Gets RefundsApi |
+| subscriptions | Gets SubscriptionsApi |
+| cancels | Gets CancelsApi |
+| merchants | Gets MerchantsApi |
+| stores | Gets StoresApi |
+| webhooks | Gets WebhooksApi |
 

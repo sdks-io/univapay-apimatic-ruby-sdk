@@ -3,9 +3,9 @@
 # This file was automatically generated for Univapay
 # by APIMATIC v3.0 ( https://www.apimatic.io ).
 
-require_relative 'controller_test_base'
+require_relative 'api_test_base'
 
-class SubscriptionsControllerTest < ControllerTestBase
+class SubscriptionsApiTest < ApiTestBase
   # Called only once for the class before any test has executed
   def setup
     setup_class

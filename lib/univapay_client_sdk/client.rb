@@ -14,51 +14,51 @@ module UnivapayClientSdk
     end
 
     # Access to charges controller.
-    # @return [ChargesController] Returns the controller instance.
+    # @return [ChargesApi] Returns the controller instance.
     def charges
-      @charges ||= ChargesController.new @global_configuration
+      @charges ||= ChargesApi.new @global_configuration
     end
 
     # Access to transaction_tokens controller.
-    # @return [TransactionTokensController] Returns the controller instance.
+    # @return [TransactionTokensApi] Returns the controller instance.
     def transaction_tokens
-      @transaction_tokens ||= TransactionTokensController.new @global_configuration
+      @transaction_tokens ||= TransactionTokensApi.new @global_configuration
     end
 
     # Access to refunds controller.
-    # @return [RefundsController] Returns the controller instance.
+    # @return [RefundsApi] Returns the controller instance.
     def refunds
-      @refunds ||= RefundsController.new @global_configuration
+      @refunds ||= RefundsApi.new @global_configuration
     end
 
     # Access to subscriptions controller.
-    # @return [SubscriptionsController] Returns the controller instance.
+    # @return [SubscriptionsApi] Returns the controller instance.
     def subscriptions
-      @subscriptions ||= SubscriptionsController.new @global_configuration
+      @subscriptions ||= SubscriptionsApi.new @global_configuration
     end
 
     # Access to cancels controller.
-    # @return [CancelsController] Returns the controller instance.
+    # @return [CancelsApi] Returns the controller instance.
     def cancels
-      @cancels ||= CancelsController.new @global_configuration
+      @cancels ||= CancelsApi.new @global_configuration
     end
 
     # Access to merchants controller.
-    # @return [MerchantsController] Returns the controller instance.
+    # @return [MerchantsApi] Returns the controller instance.
     def merchants
-      @merchants ||= MerchantsController.new @global_configuration
+      @merchants ||= MerchantsApi.new @global_configuration
     end
 
     # Access to stores controller.
-    # @return [StoresController] Returns the controller instance.
+    # @return [StoresApi] Returns the controller instance.
     def stores
-      @stores ||= StoresController.new @global_configuration
+      @stores ||= StoresApi.new @global_configuration
     end
 
     # Access to webhooks controller.
-    # @return [WebhooksController] Returns the controller instance.
+    # @return [WebhooksApi] Returns the controller instance.
     def webhooks
-      @webhooks ||= WebhooksController.new @global_configuration
+      @webhooks ||= WebhooksApi.new @global_configuration
     end
 
     def initialize(
@@ -85,12 +85,12 @@ module UnivapayClientSdk
                 else
                   config
                 end
-      user_agent_params = BaseController.user_agent_parameters
+      user_agent_params = BaseApi.user_agent_parameters
 
       @global_configuration = GlobalConfiguration.new(client_configuration: @config)
                                                  .base_uri_executor(@config.method(:get_base_uri))
-                                                 .global_errors(BaseController::GLOBAL_ERRORS)
-                                                 .user_agent(BaseController.user_agent,
+                                                 .global_errors(BaseApi::GLOBAL_ERRORS)
+                                                 .user_agent(BaseApi.user_agent,
                                                              agent_parameters: user_agent_params)
 
       initialize_auth_managers(@global_configuration)

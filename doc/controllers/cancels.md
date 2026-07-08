@@ -3,12 +3,12 @@
 Endpoints to create and manage cancellations for charges.
 
 ```ruby
-cancels_controller = client.cancels
+cancels_api = client.cancels
 ```
 
 ## Class Name
 
-`CancelsController`
+`CancelsApi`
 
 ## Methods
 
@@ -63,7 +63,7 @@ cursor = '3541d4fa-596d-428e-8a36-f274e1b3d505'
 
 cursor_direction = CursorDirectionQuery::ASC
 
-result = cancels_controller.list_cancels(
+result = cancels_api.list_cancels(
   store_id,
   charge_id,
   limit: limit,
@@ -178,7 +178,7 @@ body = CancelCreateRequest.new(
   )
 )
 
-result = cancels_controller.create_cancel(
+result = cancels_api.create_cancel(
   store_id,
   charge_id,
   idempotency_key: idempotency_key,
@@ -258,7 +258,7 @@ id = 'c4e87129-cad4-47fb-8ded-b4c0a4ae0dd4'
 
 polling = false
 
-result = cancels_controller.get_cancel(
+result = cancels_api.get_cancel(
   store_id,
   charge_id,
   id,
@@ -345,7 +345,7 @@ body = CancelUpdateRequest.new(
 
 idempotency_key = 'f64be872-353d-4c3c-84cb-3dc617fe89f7'
 
-result = cancels_controller.update_cancel(
+result = cancels_api.update_cancel(
   store_id,
   charge_id,
   id,

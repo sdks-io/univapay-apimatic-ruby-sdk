@@ -3,12 +3,12 @@
 Endpoints to create and manage recurring subscription payments.
 
 ```ruby
-subscriptions_controller = client.subscriptions
+subscriptions_api = client.subscriptions
 ```
 
 ## Class Name
 
-`SubscriptionsController`
+`SubscriptionsApi`
 
 ## Methods
 
@@ -65,7 +65,7 @@ body = SubscriptionCreateRequest.new(
   period: SubscriptionPeriod::MONTHLY
 )
 
-result = subscriptions_controller.create_subscription(body: body)
+result = subscriptions_api.create_subscription(body: body)
 
 if result.success?
   puts result.data
@@ -146,7 +146,7 @@ cursor = '3541d4fa-596d-428e-8a36-f274e1b3d505'
 
 cursor_direction = CursorDirectionQuery::ASC
 
-result = subscriptions_controller.list_all_subscriptions(
+result = subscriptions_api.list_all_subscriptions(
   limit: limit,
   cursor: cursor,
   cursor_direction: cursor_direction
@@ -281,7 +281,7 @@ cursor = '3541d4fa-596d-428e-8a36-f274e1b3d505'
 
 cursor_direction = CursorDirectionQuery::ASC
 
-result = subscriptions_controller.list_store_subscriptions(
+result = subscriptions_api.list_store_subscriptions(
   store_id,
   search: search,
   status: status,
@@ -404,7 +404,7 @@ id = '11ef335e-9aa5-c54a-8313-7f9847da313a'
 
 polling = true
 
-result = subscriptions_controller.get_subscription(
+result = subscriptions_api.get_subscription(
   store_id,
   id,
   polling: polling
@@ -519,7 +519,7 @@ body = SubscriptionUpdateRequest.new(
   )
 )
 
-result = subscriptions_controller.update_subscription(
+result = subscriptions_api.update_subscription(
   store_id,
   id,
   idempotency_key: idempotency_key,
@@ -621,7 +621,7 @@ store_id = '0cab399b-5621-425b-993b-f8507eba1e78'
 
 id = 'c4e87129-cad4-47fb-8ded-b4c0a4ae0dd4'
 
-result = subscriptions_controller.cancel_subscription(
+result = subscriptions_api.cancel_subscription(
   store_id,
   id
 )
@@ -689,7 +689,7 @@ cursor = '3541d4fa-596d-428e-8a36-f274e1b3d505'
 
 cursor_direction = CursorDirectionQuery::ASC
 
-result = subscriptions_controller.list_subscription_payments(
+result = subscriptions_api.list_subscription_payments(
   store_id,
   subscription_id,
   limit: limit,
@@ -786,7 +786,7 @@ subscription_id = '25d0fb2c-18ef-11e7-9dd3-db8fb7b820e7'
 
 payment_id = '11e89a0a-8cee-d660-b984-3fcaaed46e7c'
 
-result = subscriptions_controller.get_subscription_payment(
+result = subscriptions_api.get_subscription_payment(
   store_id,
   subscription_id,
   payment_id
@@ -871,7 +871,7 @@ body = SubscriptionPatchPaymentRequest.new(
 
 idempotency_key = 'f64be872-353d-4c3c-84cb-3dc617fe89f7'
 
-result = subscriptions_controller.update_subscription_payment(
+result = subscriptions_api.update_subscription_payment(
   store_id,
   subscription_id,
   payment_id,
@@ -946,7 +946,7 @@ store_id = '0cab399b-5621-425b-993b-f8507eba1e78'
 
 subscription_id = '25d0fb2c-18ef-11e7-9dd3-db8fb7b820e7'
 
-result = subscriptions_controller.get_subscription_latest_charge(
+result = subscriptions_api.get_subscription_latest_charge(
   store_id,
   subscription_id
 )
@@ -1038,7 +1038,7 @@ cursor = '3541d4fa-596d-428e-8a36-f274e1b3d505'
 
 cursor_direction = CursorDirectionQuery::ASC
 
-result = subscriptions_controller.list_subscription_charges(
+result = subscriptions_api.list_subscription_charges(
   merchant_id,
   store_id,
   subscription_id,
@@ -1142,7 +1142,7 @@ cursor = '3541d4fa-596d-428e-8a36-f274e1b3d505'
 
 cursor_direction = CursorDirectionQuery::ASC
 
-result = subscriptions_controller.list_charges_for_subscription_payment(
+result = subscriptions_api.list_charges_for_subscription_payment(
   store_id,
   subscription_id,
   payment_id,
@@ -1241,7 +1241,7 @@ body = SubscriptionSuspendRequest.new(
   )
 )
 
-result = subscriptions_controller.suspend_subscription(
+result = subscriptions_api.suspend_subscription(
   store_id,
   subscription_id,
   idempotency_key: idempotency_key,
@@ -1320,7 +1320,7 @@ subscription_id = '11ef335e-9aa5-c54a-8313-7f9847da313a'
 
 idempotency_key = 'f64be872-353d-4c3c-84cb-3dc617fe89f7'
 
-result = subscriptions_controller.unsuspend_subscription(
+result = subscriptions_api.unsuspend_subscription(
   store_id,
   subscription_id,
   idempotency_key: idempotency_key
@@ -1404,7 +1404,7 @@ body = SubscriptionPatchTokenRequest.new(
 
 idempotency_key = 'f64be872-353d-4c3c-84cb-3dc617fe89f7'
 
-result = subscriptions_controller.update_subscription_token(
+result = subscriptions_api.update_subscription_token(
   store_id,
   subscription_id,
   body,

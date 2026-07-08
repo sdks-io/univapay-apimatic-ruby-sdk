@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'univapay-apimatic-sdk'
-  s.version = '0.0.3'
+  s.version = '0.0.4'
   s.summary = 'Sample SDK for Univapay by APIMatic'
   s.description = 'Sample SDKs for Univapay by APIMatic'
   s.authors = ['Muhammad Rafay']
