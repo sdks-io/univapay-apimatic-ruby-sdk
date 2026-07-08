@@ -4,8 +4,8 @@
 # by APIMATIC v3.0 ( https://www.apimatic.io ).
 
 module UnivapayClientSdk
-  # SubscriptionsApi
-  class SubscriptionsApi < BaseApi
+  # SubscriptionsController
+  class SubscriptionsController < BaseController
     # Creates a new subscription.
     # @param [String] idempotency_key Optional parameter: An optional
     # idempotency key to prevent double charges and duplicate operations. We

@@ -4,8 +4,8 @@
 # by APIMATIC v3.0 ( https://www.apimatic.io ).
 
 module UnivapayClientSdk
-  # RefundsApi
-  class RefundsApi < BaseApi
+  # RefundsController
+  class RefundsController < BaseController
     # Retrieves a list of all refunds for a specific charge.
     # @param [UUID | String] store_id Required parameter: The unique identifier
     # of the store.

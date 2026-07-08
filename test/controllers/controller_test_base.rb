@@ -11,7 +11,7 @@ require 'minitest/proveit'
 require 'univapay_client_sdk'
 require_relative '../http_response_catcher'
 
-class ApiTestBase < Minitest::Test
+class ControllerTestBase < Minitest::Test
   parallelize_me!
   include UnivapayClientSdk
   include CoreLibrary

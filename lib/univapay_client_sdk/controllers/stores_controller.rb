@@ -4,8 +4,8 @@
 # by APIMATIC v3.0 ( https://www.apimatic.io ).
 
 module UnivapayClientSdk
-  # StoresApi
-  class StoresApi < BaseApi
+  # StoresController
+  class StoresController < BaseController
     # Returns stores visible to the current merchant credential. Supports cursor
     # pagination plus `short_id` and free-text `search` filters.
     # @param [Integer] limit Optional parameter: Maximum number of resources to

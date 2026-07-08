@@ -4,8 +4,8 @@
 # by APIMATIC v3.0 ( https://www.apimatic.io ).
 
 module UnivapayClientSdk
-  # CancelsApi
-  class CancelsApi < BaseApi
+  # CancelsController
+  class CancelsController < BaseController
     # Returns a paginated list of cancels for the specified charge.
     # @param [UUID | String] store_id Required parameter: The unique identifier
     # of the store.

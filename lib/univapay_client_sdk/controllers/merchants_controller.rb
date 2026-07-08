@@ -4,8 +4,8 @@
 # by APIMATIC v3.0 ( https://www.apimatic.io ).
 
 module UnivapayClientSdk
-  # MerchantsApi
-  class MerchantsApi < BaseApi
+  # MerchantsController
+  class MerchantsController < BaseController
     # Returns merchant identity and the effective configuration resolved from
     # bearer credentials. Treat this as the canonical introspection endpoint for
     # merchant integrations.

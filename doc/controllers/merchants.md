@@ -3,12 +3,12 @@
 Merchant identity and effective configuration endpoints for authenticated operators.
 
 ```ruby
-merchants_api = client.merchants
+merchants_controller = client.merchants
 ```
 
 ## Class Name
 
-`MerchantsApi`
+`MerchantsController`
 
 
 # Get Current Merchant
@@ -32,7 +32,7 @@ This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The 
 ## Example Usage
 
 ```ruby
-result = merchants_api.get_current_merchant
+result = merchants_controller.get_current_merchant
 
 if result.success?
   puts result.data

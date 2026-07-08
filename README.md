@@ -36,16 +36,16 @@ We will assume that all requests are going to originate from a backend server th
 Install the gem from the command line:
 
 ```bash
-gem install univapay-apimatic-sdk -v 0.0.1
+gem install univapay-apimatic-sdk -v 0.0.3
 ```
 
 Or add the gem to your Gemfile and run `bundle`:
 
 ```ruby
-gem 'univapay-apimatic-sdk', '0.0.1'
+gem 'univapay-apimatic-sdk', '0.0.3'
 ```
 
-For additional gem details, see the [RubyGems page for the univapay-apimatic-sdk gem](https://rubygems.org/gems/univapay-apimatic-sdk/versions/0.0.1).
+For additional gem details, see the [RubyGems page for the univapay-apimatic-sdk gem](https://rubygems.org/gems/univapay-apimatic-sdk/versions/0.0.3).
 
 ## IRB Console Usage
 
@@ -92,14 +92,14 @@ rake
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
 | base_url | `String` | Base URL for the API<br>*Default*: `'https://api.univapay.com'` |
-| environment | [`Environment`](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/README.md#environments) | The API environment. <br> **Default: `Environment.PRODUCTION`** |
+| environment | [`Environment`](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/README.md#environments) | The API environment. <br> **Default: `Environment.PRODUCTION`** |
 | connection | `Faraday::Connection` | The Faraday connection object passed by the SDK user for making requests |
 | adapter | `Faraday::Adapter` | The Faraday adapter object passed by the SDK user for performing http requests |
 | timeout | `Float` | The value to use for connection timeout. <br> **Default: 30** |
@@ -109,9 +109,9 @@ The following parameters are configurable for the API Client:
 | retry_statuses | `Array` | A list of HTTP statuses to retry. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
 | retry_methods | `Array` | A list of HTTP methods to retry. <br> **Default: %i[get put]** |
 | http_callback | `HttpCallBack` | The Http CallBack allows defining callables for pre and post API calls. |
-| proxy_settings | [`ProxySettings`](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/proxy-settings.md) | Optional proxy configuration to route HTTP requests through a proxy server. |
-| logging_configuration | [`LoggingConfiguration`](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/logging-configuration.md) | The SDK logging configuration for API calls |
-| bearer_auth_credentials | [`BearerAuthCredentials`](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/auth/oauth-2-bearer-token.md) | The credential object for OAuth 2 Bearer token |
+| proxy_settings | [`ProxySettings`](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/proxy-settings.md) | Optional proxy configuration to route HTTP requests through a proxy server. |
+| logging_configuration | [`LoggingConfiguration`](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/logging-configuration.md) | The SDK logging configuration for API calls |
+| bearer_auth_credentials | [`BearerAuthCredentials`](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/auth/oauth-2-bearer-token.md) | The credential object for OAuth 2 Bearer token |
 
 The API client can be initialized as follows:
 
@@ -149,7 +149,7 @@ include UnivapayClientSdk
 client = Client.from_env
 ```
 
-See the [`Environment-Based Client Initialization`](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/environment-based-client-initialization.md) section for details.
+See the [`Environment-Based Client Initialization`](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/environment-based-client-initialization.md) section for details.
 
 ## Environments
 
@@ -165,60 +165,60 @@ The SDK can be configured to use a different environment for making API calls. A
 
 This API uses the following authentication schemes.
 
-* [`JWT_TOKEN (OAuth 2 Bearer token)`](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/auth/oauth-2-bearer-token.md)
+* [`JWT_TOKEN (OAuth 2 Bearer token)`](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/auth/oauth-2-bearer-token.md)
 
 ## List of APIs
 
-* [Transaction Tokens](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/controllers/transaction-tokens.md)
-* [Charges](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/controllers/charges.md)
-* [Refunds](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/controllers/refunds.md)
-* [Subscriptions](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/controllers/subscriptions.md)
-* [Cancels](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/controllers/cancels.md)
-* [Merchants](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/controllers/merchants.md)
-* [Stores](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/controllers/stores.md)
-* [Webhooks](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/controllers/webhooks.md)
+* [Transaction Tokens](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/controllers/transaction-tokens.md)
+* [Charges](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/controllers/charges.md)
+* [Refunds](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/controllers/refunds.md)
+* [Subscriptions](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/controllers/subscriptions.md)
+* [Cancels](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/controllers/cancels.md)
+* [Merchants](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/controllers/merchants.md)
+* [Stores](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/controllers/stores.md)
+* [Webhooks](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/controllers/webhooks.md)
 
 ## Webhooks
 
-* [Charge Updated](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/charge-updated-handler.md)
-* [Charge Finished](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/charge-finished-handler.md)
-* [Token Created](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/token-created-handler.md)
-* [Token Updated](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/token-updated-handler.md)
-* [Token Three Ds Updated](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/token-three-ds-updated-handler.md)
-* [Token Cvv Auth Updated](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/token-cvv-auth-updated-handler.md)
-* [Token Cvv Auth Check Updated](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/token-cvv-auth-check-updated-handler.md)
-* [Token Replaced](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/token-replaced-handler.md)
-* [Recurring Token Deleted](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/recurring-token-deleted-handler.md)
-* [Refund](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/refund-handler.md)
-* [Cancel](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/cancel-handler.md)
-* [Subscription Created](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/subscription-created-handler.md)
-* [Subscription Payment](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/subscription-payment-handler.md)
-* [Subscription Completed](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/subscription-completed-handler.md)
-* [Subscription Failure](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/subscription-failure-handler.md)
-* [Subscription Canceled](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/subscription-canceled-handler.md)
-* [Subscription Suspended](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/subscription-suspended-handler.md)
-* [Bank-Transfer](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/bank-transfer-handler.md)
-* [Customs](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/events/webhooks/customs-handler.md)
+* [Charge Updated](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/charge-updated-handler.md)
+* [Charge Finished](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/charge-finished-handler.md)
+* [Token Created](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/token-created-handler.md)
+* [Token Updated](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/token-updated-handler.md)
+* [Token Three Ds Updated](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/token-three-ds-updated-handler.md)
+* [Token Cvv Auth Updated](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/token-cvv-auth-updated-handler.md)
+* [Token Cvv Auth Check Updated](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/token-cvv-auth-check-updated-handler.md)
+* [Token Replaced](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/token-replaced-handler.md)
+* [Recurring Token Deleted](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/recurring-token-deleted-handler.md)
+* [Refund](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/refund-handler.md)
+* [Cancel](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/cancel-handler.md)
+* [Subscription Created](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/subscription-created-handler.md)
+* [Subscription Payment](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/subscription-payment-handler.md)
+* [Subscription Completed](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/subscription-completed-handler.md)
+* [Subscription Failure](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/subscription-failure-handler.md)
+* [Subscription Canceled](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/subscription-canceled-handler.md)
+* [Subscription Suspended](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/subscription-suspended-handler.md)
+* [Bank-Transfer](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/bank-transfer-handler.md)
+* [Customs](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/events/webhooks/customs-handler.md)
 
 ## SDK Infrastructure
 
 ### Configuration
 
-* [ProxySettings](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/proxy-settings.md)
-* [Environment-Based Client Initialization](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/environment-based-client-initialization.md)
-* [AbstractLogger](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/abstract-logger.md)
-* [LoggingConfiguration](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/logging-configuration.md)
-* [RequestLoggingConfiguration](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/request-logging-configuration.md)
-* [ResponseLoggingConfiguration](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/response-logging-configuration.md)
+* [ProxySettings](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/proxy-settings.md)
+* [Environment-Based Client Initialization](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/environment-based-client-initialization.md)
+* [AbstractLogger](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/abstract-logger.md)
+* [LoggingConfiguration](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/logging-configuration.md)
+* [RequestLoggingConfiguration](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/request-logging-configuration.md)
+* [ResponseLoggingConfiguration](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/response-logging-configuration.md)
 
 ### HTTP
 
-* [HttpResponse](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/http-response.md)
-* [HttpRequest](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/http-request.md)
+* [HttpResponse](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/http-response.md)
+* [HttpRequest](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/http-request.md)
 
 ### Utilities
 
-* [ApiResponse](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/api-response.md)
-* [ApiHelper](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/api-helper.md)
-* [DateTimeHelper](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.1/doc/date-time-helper.md)
+* [ApiResponse](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/api-response.md)
+* [ApiHelper](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/api-helper.md)
+* [DateTimeHelper](https://www.github.com/sdks-io/univapay-apimatic-ruby-sdk/tree/0.0.3/doc/date-time-helper.md)
 
